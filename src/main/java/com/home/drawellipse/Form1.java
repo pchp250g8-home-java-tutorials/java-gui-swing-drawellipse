@@ -4,8 +4,10 @@
  */
 package com.home.drawellipse;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Rectangle;
+import java.awt.BasicStroke;
 
 /**
  *
@@ -59,15 +61,19 @@ public class Form1 extends javax.swing.JFrame {
 
     @Override
     public void paint(Graphics g) {
-        Rectangle rcPaint = g.getClipBounds();
-        g.setColor(Color.BLACK);
-        g.clearRect(0, 0, rcPaint.width, rcPaint.height);
-        g.setColor(Color.BLACK);
-        g.fillRect(0, 0, rcPaint.width, rcPaint.height);
-        g.setColor(Color.RED);
-        g.drawOval(0, 0, rcPaint.width, rcPaint.height);
-        g.setColor(Color.YELLOW);
-        g.fillOval(0, 0, rcPaint.width, rcPaint.height);
+        int nWidth = this.getWidth();
+        int nHeight = this.getHeight();
+        Rectangle rcPaint = new Rectangle(0,0,nWidth, nHeight);
+        Graphics2D g2d = (Graphics2D)g;
+        g2d.setStroke(new BasicStroke(5));
+        g2d.setColor(Color.BLACK);
+        g2d.clearRect(0, 0, rcPaint.width, rcPaint.height);
+        g2d.setColor(Color.BLACK);
+        g2d.fillRect(0, 0, rcPaint.width, rcPaint.height);
+        g2d.setColor(Color.RED);
+        g2d.drawOval(0, 0, rcPaint.width, rcPaint.height);
+        g2d.setColor(Color.YELLOW);
+        g2d.fillOval(0, 0, rcPaint.width, rcPaint.height);
     }
     /**
      * @param args the command line arguments
