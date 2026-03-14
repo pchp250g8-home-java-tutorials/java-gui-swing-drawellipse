@@ -1,4 +1,4 @@
-DrawEllipse. Java tutorials. GUI Application. Swing Library. 2D Graphics. 
+DrawEllipse. Java tutorials. GUI Application. Swing Library. 2D Graphics.
 The program does the following:
    1. Creates a dialog box (form).
    2. Starts a cycle of processing messages (events) from the user and/or the operating system.
